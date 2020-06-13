@@ -27,7 +27,7 @@ public class SwitchWindow {
 		driver.switchTo().window(list.get(2));
 		driver.close();
 		driver.switchTo().window(list.get(0));
-		driver.quit();
+		driver.close();
 		}
 
 }

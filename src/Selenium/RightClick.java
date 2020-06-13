@@ -14,7 +14,9 @@ public class RightClick {
 		WebDriver driver=new ChromeDriver();
 		driver.get("https://www.amazon.in/");
 		
-		WebElement ele=driver.findElement(By.id("nav-hamburger-menu"));
+		String Colour=driver.findElement(By.xpath("//*[@class='nav-sprite nav-logo-tagline nav-prime-try']")).getCssValue("font-size");
+		System.out.println(Colour);
+	/*	WebElement ele=driver.findElement(By.id("nav-hamburger-menu"));
 		Actions ac=new Actions(driver);
 		ac.contextClick(ele).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).click().build().perform();
 		
@@ -22,7 +24,7 @@ public class RightClick {
 		System.out.println(URL.size());
 		for(WebElement b:URL) {
 			System.out.println(b.getAttribute("href"));
-		}
+		}*/
 	}
 
 }
